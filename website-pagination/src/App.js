@@ -24,9 +24,9 @@ function App() {
 
     // 7. 
     // doing a check that data and data.products have values inside them then only setProducts
-    if()
-    setProducts(data.products);
-
+    if( data && data.products) {
+      setProducts(data.products);
+    }
     // 4. 
     console.log(data);
   };
