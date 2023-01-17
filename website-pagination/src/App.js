@@ -6,11 +6,11 @@ function App() {
 
   // 6.
   // Now we have to keep all these products in some variable, so we will use a react hook useState 
-  const [product, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
 
   // 1.
-  // Here fetchProduct is an arrow function which is asynchronous in nature
-  const fetchProduct = async() => {
+  // Here fetchProducts is an arrow function which is asynchronous in nature
+  const fetchProducts = async() => {
 
     // 2.
     // We can use fetch() to get all the products from api.
@@ -21,6 +21,11 @@ function App() {
     // Converting the response into json format.
        // We put await to wait for the further operation  
     const data = await response.json();
+
+    // 7. 
+    // doing a check that data and data.products have values inside them then only setProducts
+    if()
+    setProducts(data.products);
 
     // 4. 
     console.log(data);
