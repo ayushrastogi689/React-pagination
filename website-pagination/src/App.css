@@ -6,3 +6,12 @@
     gap: 20px;
     
 }
+
+.products__single{
+    height: 250px;
+    padding: 20px;
+    background-color: grey;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
