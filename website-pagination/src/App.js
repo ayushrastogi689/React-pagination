@@ -46,12 +46,18 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div>
       {
         products.length> 0 && <div className="products" >
           {
             products.map((product) => {
-            return <span>{product.title}</span>;
+            return (
+              <span>
+                <img src= {product.thumbnail} />
+                {product.title}
+                
+              </span>
+              );
             })
           }
         </div>
