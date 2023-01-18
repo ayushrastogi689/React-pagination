@@ -52,9 +52,9 @@ function App() {
           {
             products.map((product) => {
             return (
-              <span>
-                <img src= {product.thumbnail} />
-                {product.title}
+              <span className="products__single" key={product.id}>
+                <img src= {product.thumbnail} alt={product.title}/>
+                 <span> {product.title}</span>
                 
               </span>
               );
