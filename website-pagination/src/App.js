@@ -47,7 +47,15 @@ function App() {
 
   return (
     <div className="App">
-      
+      {
+        products.length> 0 && <div className="products" >
+          {
+            products.map((product) => {
+            return <span>{product.title}</span>;
+            })
+          }
+        </div>
+      }
     </div>
   );
 }
