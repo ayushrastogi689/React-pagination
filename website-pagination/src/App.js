@@ -68,6 +68,11 @@ function App() {
           }
         </div>
       }
+      {
+        products.length > 0 && <div className="pagination">
+          
+        </div>
+      }
     </div>
   );
 }
