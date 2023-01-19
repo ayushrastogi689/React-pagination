@@ -7,6 +7,11 @@ function App() {
   // 6.
   // Now we have to keep all these products in some variable, so we will use a react hook useState 
   const [products, setProducts] = useState([]);
+  // 13. 
+  // useState for handling pagenation
+  const [page, setPage] = useState(1);
+
+
 
   // 1.
   // Here fetchProducts is an arrow function which is asynchronous in nature
@@ -39,10 +44,11 @@ function App() {
 
 
 
-
-
-
-
+// 8. Did a check of products.length >0 
+// 9. map() the product
+// 10. return it in span
+// 11. Inside first span we render image of products  
+// 12. Inside another span we reder product title
 
 
   return (
@@ -50,7 +56,7 @@ function App() {
       {
         products.length> 0 && <div className="products" >
           {
-            products.map((product) => {
+            products.slice(page * 10 - 10, page*10).map((product) => {
             return (
               <span className="products__single" key={product.id}>
                 <img src= {product.thumbnail} alt={product.title}/>
