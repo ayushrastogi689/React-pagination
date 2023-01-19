@@ -70,7 +70,12 @@ function App() {
       }
       {
         products.length > 0 && <div className="pagination">
-          
+          <span></span>
+          {
+            [...Array(products.length/10)]
+          }
+          <span></span>
+          <span></span>
         </div>
       }
     </div>
