@@ -58,11 +58,11 @@ function App() {
           {
             products.slice(page * 10 - 10, page*10).map((product) => {
             return (
-              <span className="products" key={product.id}>
+              <div className="products" key={product.id}>
                 <img src= {product.thumbnail} alt={product.title}/>
                  <span> {product.title}</span>
                 
-              </span>
+              </div>
               );
             })
           }
@@ -73,11 +73,11 @@ function App() {
           <span><i class="fa-solid fa-square-caret-left"></i></span>
           {
             [...Array(products.length/10)].map((_,index)=>{
-              return <span>{index+1}</span>
+              return <span key={index}>{index+1}</span>
             })
           }
           <span><i class="fa-solid fa-square-caret-right"></i></span>
-          <span></span>
+          
         </div>
       }
     </div>
