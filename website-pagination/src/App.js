@@ -41,7 +41,10 @@ function App() {
     fetchProducts()
   }, [])
 
-
+// 13. 
+const selectPageHandler = (selectedPage) => {
+  setPage(selectedPage)
+}
 
 
 // 8. Did a check of products.length >0 
@@ -73,7 +76,7 @@ function App() {
           <span><i class="fa-solid fa-square-caret-left"></i></span>
           {
             [...Array(products.length/10)].map((_,index)=>{
-              return <span key={index}>{index+1}</span>
+              return <span onClick={()=>selectPageHandler} key={index}>{index+1}</span>
             })
           }
           <span><i class="fa-solid fa-square-caret-right"></i></span>
