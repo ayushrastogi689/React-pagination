@@ -39,3 +39,7 @@
     border: 1px solid gray;
     cursor: pointer;
 }
+
+.selected {
+    background-color: rgb(220, 220, 220);
+}

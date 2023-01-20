@@ -76,7 +76,7 @@ const selectPageHandler = (selectedPage) => {
           <span><i class="fa-solid fa-square-caret-left"></i></span>
           {
             [...Array(products.length/10)].map((_,index)=>{
-              return <span onClick={()=>selectPageHandler} key={index}>{index+1}</span>
+              return <span className={page === index+1 ? "selected" : ""} onClick={()=>selectPageHandler} key={index}>{index+1}</span>
             })
           }
           <span><i class="fa-solid fa-square-caret-right"></i></span>
