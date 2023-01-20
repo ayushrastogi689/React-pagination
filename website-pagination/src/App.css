@@ -1,13 +1,15 @@
-.products{
+.container{
     margin: 20px;
     padding: 0;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 20px;
     
 }
 
-.products__single{
+.products{
     height: 150px;
     padding: 20px;
     background-color: grey;
@@ -16,7 +18,7 @@
     cursor: pointer;
 }
 
-.products__single > img{
+.products > img{
     width: 100%;
     height: 95%;
     object-fit: cover;

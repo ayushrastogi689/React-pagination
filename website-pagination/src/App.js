@@ -54,11 +54,11 @@ function App() {
   return (
     <div>
       {
-        products.length> 0 && <div className="products" >
+        products.length> 0 && <div className="container" >
           {
             products.slice(page * 10 - 10, page*10).map((product) => {
             return (
-              <span className="products__single" key={product.id}>
+              <span className="products" key={product.id}>
                 <img src= {product.thumbnail} alt={product.title}/>
                  <span> {product.title}</span>
                 
@@ -70,13 +70,13 @@ function App() {
       }
       {
         products.length > 0 && <div className="pagination">
-          <span></span>
+          <span><i class="fa-solid fa-square-caret-left"></i></span>
           {
             [...Array(products.length/10)].map((_,index)=>{
               return <span>{index+1}</span>
             })
           }
-          <span></span>
+          <span><i class="fa-solid fa-square-caret-right"></i></span>
           <span></span>
         </div>
       }
