@@ -72,7 +72,9 @@ function App() {
         products.length > 0 && <div className="pagination">
           <span></span>
           {
-            [...Array(products.length/10)]
+            [...Array(products.length/10)].map((_,index)=>{
+              return <span>{index+1}</span>
+            })
           }
           <span></span>
           <span></span>
