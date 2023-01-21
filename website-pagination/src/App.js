@@ -43,6 +43,9 @@ function App() {
 
 // 13. 
 const selectPageHandler = (selectedPage) => {
+  // 14. 
+  // there is no page such as 0, so we are going to add a check
+  if(selectedPage >=1 && selectedPage <= products.length && selectedPage !== page)
   setPage(selectedPage)
 }
 
