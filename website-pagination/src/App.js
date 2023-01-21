@@ -76,14 +76,23 @@ const selectPageHandler = (selectedPage) => {
       }
       {
         products.length > 0 && <div className="pagination">
-          <span onClick={()=>selectPageHandler(page-1)}><i class="fa-solid fa-square-caret-left"></i></span>
+          <span className={page > 1 ?"":"pagination_disable"} onClick={()=>selectPageHandler(page-1)}>
+            <i class="fa-solid fa-square-caret-left"></i>
+          </span>
+          
           {
             [...Array(products.length/10)].map((_,index)=>{
-              return (<span className={page === index+1 ? "selected" : ""} 
-                      onClick={()=>selectPageHandler(index+1)} key={index}>{index+1}</span>)
+              return (
+                    <span className={page === index+1 ? "selected" : ""} 
+                      onClick={()=>selectPageHandler(index+1)} key={index}>{index+1}
+                    </span>
+                  )
             })
           }
-          <span onClick={()=>selectPageHandler(page+1)}><i class="fa-solid fa-square-caret-right"></i></span>
+
+          <span className={page< products.length/10 ?"":"pagination_disable"} onClick={()=>selectPageHandler(page+1)}>
+            <i class="fa-solid fa-square-caret-right"></i>
+          </span>
           
         </div>
       }
