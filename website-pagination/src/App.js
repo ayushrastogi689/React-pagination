@@ -76,7 +76,7 @@ const selectPageHandler = (selectedPage) => {
       }
       {
         products.length > 0 && <div className="pagination">
-          <span className={page > 1 ?"":"pagination_disable"} onClick={()=>selectPageHandler(page-1)}>
+          <span className={page > 1 ?"":"pagination_disabled"} onClick={()=>selectPageHandler(page-1)}>
             <i class="fa-solid fa-square-caret-left"></i>
           </span>
           
@@ -90,7 +90,7 @@ const selectPageHandler = (selectedPage) => {
             })
           }
 
-          <span className={page< products.length/10 ?"":"pagination_disable"} onClick={()=>selectPageHandler(page+1)}>
+          <span className={page< products.length/10 ?"":"pagination_disabled"} onClick={()=>selectPageHandler(page+1)}>
             <i class="fa-solid fa-square-caret-right"></i>
           </span>
           
