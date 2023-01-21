@@ -8,7 +8,7 @@ function App() {
   // Now we have to keep all these products in some variable, so we will use a react hook useState 
   const [products, setProducts] = useState([]);
   // 13. 
-  // useState for handling pagenation
+  // useState for handling pagination
   const [page, setPage] = useState(1);
 
 
@@ -73,13 +73,14 @@ const selectPageHandler = (selectedPage) => {
       }
       {
         products.length > 0 && <div className="pagination">
-          <span><i class="fa-solid fa-square-caret-left"></i></span>
+          <span onClick={()=>selectPageHandler(page-1)}><i class="fa-solid fa-square-caret-left"></i></span>
           {
             [...Array(products.length/10)].map((_,index)=>{
-              return <span className={page === index+1 ? "selected" : ""} onClick={()=>selectPageHandler} key={index}>{index+1}</span>
+              return (<span className={page === index+1 ? "selected" : ""} 
+                      onClick={()=>selectPageHandler(index+1)} key={index}>{index+1}</span>)
             })
           }
-          <span><i class="fa-solid fa-square-caret-right"></i></span>
+          <span onClick={()=>selectPageHandler(page+1)}><i class="fa-solid fa-square-caret-right"></i></span>
           
         </div>
       }
